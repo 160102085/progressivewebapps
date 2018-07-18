@@ -12,4 +12,41 @@ function getfile(file,callback){
 getfile("data.json",function(text){
   var data = JSON.parse(text);
   console.log(data);
+  details(data.basics);
+  career(data.CareerObjectives);
 })
+var child = document.querySelector(".childone")
+function details(det){
+var img = document.createElement("img");
+img.src = det.image;
+child.appendChild(img);
+var name = document.createElement("h3");
+name.textContent = det.name;
+child.appendChild(name);
+var phoneno = document.createElement("h4");
+phoneno.textContent = det.phoneno;
+child.appendChild(phoneno);
+var mail= document.createElement("a");
+mail.href = "mailto:varshikaindukuri@gmail.com";
+mail.textContent = det.email;
+child.appendChild(mail);
+var Address = document.createElement("h5");
+Address.textContent = det.Address;
+child.appendChild(Address);
+var hr = document.createElement("hr");
+child.appendChild(hr);
+var Address = document.createElement("p");
+Address.textContent = det.Address;
+child.appendChild(Address);
+}
+var child2 = document.querySelector(".childtwo");
+function career(careerinfo) {
+  var cr1 = document.createElement("h2");
+  cr1.textContent = "CareerObjectives";
+  child2.appendChild(cr1);
+  var hr = document.createElement("hr");
+  child2.appendChild(hr);
+  var career1 = document.createElement("p");
+  career1.textContent = careerinfo.info;
+  child2.appendChild(career1);
+}
