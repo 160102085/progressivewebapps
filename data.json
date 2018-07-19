@@ -38,5 +38,10 @@
     "title":"operating systems",
     "data":["sql","mysql","oracle"]
   }
-]
+],
+"Achievements":
+{
+  "ppt":"got prize in ppt",
+  "ace":"member of ace"
+}
 }

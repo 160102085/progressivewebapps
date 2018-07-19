@@ -34,6 +34,7 @@ newfile.then(data=>{
   career(data.CareerObjectives);
   education(data.education);
   tskills(data.skills);
+  achieve(data.Achievements);
 })
 var child = document.querySelector(".childone");
 function details(det){
@@ -106,4 +107,18 @@ function education(edu){
       tabledata+="<tr><td>"+skillinfo[i].title+"</td><td>"+skillinfo[i].data+"</td></tr>";
     }
     skilldata.innerHTML=tabledata;
+}
+function Achieve(ach) {
+    var s1= document.createElement("h2");
+    s1.textContent="Achievements";
+    child2.appendChild(s1);
+    var hr = document.createElement("hr");
+    child2.appendChild(hr);
+    for(i=0;i<ach.length;i++){
+  var ul = document.createElement("ul");
+  var li = document.createElement("li");
+  li.textContent=ach[i].Achievements;
+  ul.appendChild(li);
+  child2.appendChild(li);
+}
 }
