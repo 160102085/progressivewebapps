@@ -30,6 +30,12 @@ img{
   background-color: #81DAF5;
   width: 90%;
 }
+table{
+  width: 90%;
+}
+td{
+  padding: 2%;
+}
 @media only screen and (min-width: 320px) and (max-width: 480px){
   .parent{
     display: flex;
